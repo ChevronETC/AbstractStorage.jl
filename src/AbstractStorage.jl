@@ -4,6 +4,10 @@ module AbstractStorage
 
 abstract type Container end
 
-export Container
+function readpieces() end
+function readpieces!() end
+function writepieces() end
+
+export Container, readpieces, readpieces!, writepieces
 
 end
