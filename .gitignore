@@ -1,0 +1,9 @@
+.vscode
+.devcontainer
+docs/build
+*~
+*.js
+*.swp
+.nfs*
+*.cov
+results.md
