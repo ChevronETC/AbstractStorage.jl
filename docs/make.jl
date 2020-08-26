@@ -11,5 +11,5 @@ makedocs(
 )
 
 deploydocs(
-    repo = "github.com/ChevronETC/AbstractStorage.jl.git"
+    repo = "git@github.com:ChevronETC/AbstractStorage.jl.git"
 )
