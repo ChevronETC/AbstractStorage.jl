@@ -20,12 +20,12 @@ Container(::Type{C}, d::Dict) where {C<:Container} = nothing
 """
   session(container::C)
 
-Create a authenticated interaction with a container
+Create an authenticated interaction with a container
 """
 session(container::C) where {C<:Container} = nothing
 
 """
-  scrubsession!(container::C)
+  scrubsession(container::C)
 
 Remove sensitive information from `session` (e.g. token, client secret)
 """
