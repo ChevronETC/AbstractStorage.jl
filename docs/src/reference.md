@@ -1,7 +1,7 @@
 # Reference
 
 ```@docs
-AbstractStroage
+AbstractStorage
 Container
 session
 scrubsession
