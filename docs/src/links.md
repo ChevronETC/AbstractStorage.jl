@@ -1,4 +1,4 @@
 # Links to Concrete Implementations
 
-See the below:
-Concreate Implementation Exmaple: [AzStorage](https://dev.azure.com/chevron/ETC-ESD-AzStorage.jl/_git/AzStorage.jl)
+* Azure Storage: [AzStorage](https://github.com/ChevronETC/AzStorage.jl)
+* POSIX Storage: [FolderStorage](https://github.com/ChevronETC/FolderStorage.jl)
