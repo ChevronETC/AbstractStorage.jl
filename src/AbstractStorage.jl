@@ -18,6 +18,14 @@ Create a container object
 Container(::Type{C}, d::Dict) where {C<:Container} = nothing
 
 """
+  minimaldict(container::C)
+
+Create a dictionary from `container` containing the minimum
+information required to locate the container.
+"""
+minimaldict(container::C) where {C<:Container} = Dict(n=>getfield(container, n) for n ∈ fieldnames(C))
+
+"""
   session(container::C)
 
 Create a authenticated interaction with a container
@@ -38,6 +46,6 @@ Remove sensitive information from `session` (e.g. token, client secret)
 """
 scrubsession!(container::C) where {C<:Container} = container
 
-export Container, scrubsession, scrubsession!, session
+export Container, minimaldict, scrubsession, scrubsession!, session
 
 end
