@@ -26,6 +26,13 @@ information required to locate the container.
 minimaldict(container::C) where {C<:Container} = Dict(n=>getfield(container, n) for n ∈ fieldnames(C))
 
 """
+  backend(container::C)
+
+String representation of the storage backend, e.g. "posix", "azureblob", "awsbucket", etc.
+"""
+backend(container::C) where {C<:Container} = "unknown"
+
+"""
   session(container::C)
 
 Create a authenticated interaction with a container
@@ -46,6 +53,6 @@ Remove sensitive information from `session` (e.g. token, client secret)
 """
 scrubsession!(container::C) where {C<:Container} = container
 
-export Container, minimaldict, scrubsession, scrubsession!, session
+export Container, backend, minimaldict, scrubsession, scrubsession!, session
 
 end
