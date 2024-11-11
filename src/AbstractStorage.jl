@@ -5,6 +5,9 @@ Module defining interface to use for creating Storage objects
 """
 module AbstractStorage
 
+struct FileDoesNotExistError <: Exception end
+Base.showerror(io::IO, e::FileDoesNotExistError) = print(io, "file does not exist")
+
 """
 Define an abstract Container Type to be used for storage like objects
 """
@@ -53,6 +56,6 @@ Remove sensitive information from `session` (e.g. token, client secret)
 """
 scrubsession!(container::C) where {C<:Container} = container
 
-export Container, backend, minimaldict, scrubsession, scrubsession!, session
+export Container, FileDoesNotExistError, backend, minimaldict, scrubsession, scrubsession!, session
 
 end
